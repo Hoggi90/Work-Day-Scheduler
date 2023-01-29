@@ -38,10 +38,15 @@ textarea {
 }
 
 .hour {
+  display: flex;
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
-  text-align: center;
+  text-align: center !important;
+  font-size: 24px;
+  justify-content: center !important;
+  align-items: center !important;
+
 
 }
 
@@ -69,6 +74,8 @@ textarea {
   width: 5%;
 }
 
-.saveBtn i:hover {
+.saveBtn:hover {
   font-size: 25px;
+  background-color: #44cceb;
+
 }

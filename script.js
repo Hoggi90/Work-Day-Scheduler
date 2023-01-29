@@ -1,11 +1,15 @@
 $(function() {
   var currentDay = moment().format('dddd, DD MMMM YYYY');
   $('#currentDay').text(currentDay);
+  var previousDay = localStorage.getItem("previousDay");
+  if (previousDay !== currentDay) {
+    localStorage.clear();
+  }
+  localStorage.setItem("previousDay", currentDay);
   
   var startTime = moment("9:00", "HH:mm");
   var endTime = moment("18:00", "HH:mm");
   var currentTime = moment().format("HH:00");
-  console.log(currentTime);
   
   for (var time = startTime; time.isBefore(endTime); time.add(1, 'hours')) {
   var hour = time.format("HH:00"); 
@@ -17,11 +21,11 @@ $(function() {
   }
   
   $(".saveBtn").click(function(){
+  $("#modal").modal('show');
   var description = $(this).prev(".description");
   var i = $(".description").index(description);
   var entryData = "scheduleEntry" + i;
   localStorage.setItem(entryData, description.val());
-  alert("Saved!")
   });
   
   $(".description").each(function(i) {
@@ -30,6 +34,8 @@ $(function() {
   $(this).val(stored || "");
   });
   });
+
+
 
 
 
