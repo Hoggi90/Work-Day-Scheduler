@@ -23,7 +23,7 @@ textarea {
 
 .description {
   white-space: pre-wrap;
-  width: 60%;
+  width: 75%;
 }
 
 .container {
@@ -41,8 +41,9 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
-}
+  text-align: center;
 
+}
 
 .past {
   background-color: #d3d3d3;
@@ -65,9 +66,9 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  width: 5%;
 }
 
 .saveBtn i:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
+  font-size: 25px;
 }
