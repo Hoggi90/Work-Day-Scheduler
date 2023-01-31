@@ -66,16 +66,29 @@ textarea {
 }
 
 .saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border: none;
   background-color: #06aed5;
   color: white;
-  width: 5%;
+  width: 4%;
 }
 
 .saveBtn:hover {
   font-size: 25px;
   background-color: #44cceb;
+
+}
+
+.clearBtn {
+  border: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #ed1313;
+  color: white;
+  width: 4%;
+}
+
+.clearBtn:hover {
+  font-size: 25px;
+  background-color: #f4a0a0;
 
 }
